@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int check(month);
+int check(int);
 
 int main(void)
 {
@@ -10,7 +10,11 @@ int main(void)
 
     check(month);
 
-int check(month)
+    return 0;
+
+}
+
+int check(int month)
 {
     switch (month)
     {
@@ -57,7 +61,6 @@ int check(month)
         check(month);
         break;
     }
-}
-    
+
     return 0;
 }
