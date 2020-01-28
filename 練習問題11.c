@@ -8,7 +8,7 @@ int main(void)
     printf("西暦年を入力してください：");
     scanf("%d",&year);
 
-    check(int);
+    check(year);
 
     return 0;
 }
