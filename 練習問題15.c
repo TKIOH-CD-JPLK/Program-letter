@@ -11,7 +11,7 @@
 
 #include <stdio.h>
 
-void maxmin(int array[],int max,int min); /* 復習1~5*/
+void maxmin(int array[],int *pmax,int *pmin); /* 復習1~5*/
 
 int main(void)
 {
@@ -30,16 +30,16 @@ int main(void)
     return 0;
 }
 
-void maxmin(int array[],int max,int min)
+void maxmin(int array[],int *pmax,int *pmin)
 {
     int i = 0;
     
-    *max = 0;
-    *min = 100;
+    *pmax = 0;
+    *pmin = 100;
     
     while (array[i] != -1) {
-        if (array[i] > max) max = array[i];
-        if (array[i] < min) min = array[i];
+        if (array[i] > *pmax) *pmax = array[i];
+        if (array[i] < *pmin) *pmin = array[i];
         i++;
     }
 }
