@@ -4,16 +4,19 @@
 */
 
 #include <stdio.h>
+#include <string.h>
 
 int main(void)
 {
-    char sur[256],name[256],full[256];
+    char sur[256],name[256];
     printf("あなたの苗字を入力してください。\n");
     scanf("%s",sur);
     printf("あなたの名前を入力してください。\n");
     scanf("%s",name);
 
-    printf("あなたの氏名は%s %sです。\n",sur,name);
+    strcat(sur,name);
+
+    printf("あなたの氏名は%sです。\n",sur);
 
     return 0;
     
