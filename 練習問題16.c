@@ -17,11 +17,11 @@ int main(void)
     for ( i = 0; i < 3; i++)
     {
         printf("名前を入力してください：");
-        scanf("%s\n",per_info->name[i]);
+        scanf("%s\n",data.name[i]);
         printf("年齢を入力してください：");
-        scanf("%d\n",per_info->age[i]);
+        scanf("%d\n",&data.age[i]);
         printf("性別（1:男性、2:女性）を入力してください：");
-        scanf("%d\n",per_info->age[i]);
+        scanf("%d\n",&data.sex[i]);
 
     }
 
@@ -35,9 +35,9 @@ void per_info_print(per_info *data)
     int i;
     for ( i = 0; i < 3; i++)
     {
-        printf("%s\n",per_info->name[i]);
-        printf("%d\n",per_info->age[i]);
-        printf("%d\n",per_info->sex[i]);
+        printf("%s\n",data->name[i]);
+        printf("%d\n",data->age[i]);
+        printf("%d\n",data->sex[i]);
     }
     return;
 }
