@@ -12,6 +12,7 @@ void per_info_print(per_info *data);
 int main(void)
 {
     per_info data;
+    int i;
 
     for ( i = 0; i < 3; i++)
     {
@@ -31,6 +32,7 @@ int main(void)
 
 void per_info_print(per_info *data)
 {
+    int i;
     for ( i = 0; i < 3; i++)
     {
         printf("%s\n",per_info->name[i]);
