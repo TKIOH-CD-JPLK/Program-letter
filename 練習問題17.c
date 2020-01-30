@@ -22,18 +22,28 @@ void Output_People(People data);
 int main(void)
 {
     int i;
-    People data[4];
+    People data[5];
 
-    for ( i = 0; i < 4; i++)
+    FILE *fp;
+
+    fp = fopen("test.csv","w");
+
+    for ( i = 0; i < 5; i++)
     {
         Input_People(&data[i]);
     }
 
-    for ( i = 0; i < 4; i++)
+    for ( i = 0; i < 5; i++)
     {
         Output_People(data[i]);
     }
     
+    for ( i = 0; i < 5; i++)
+    {
+        fprintf(fp,"%d%s%d",data[i].number,data[i].name,data[i].score);
+    }
+    fclose(fp);
+
     return 0;
 }
 
